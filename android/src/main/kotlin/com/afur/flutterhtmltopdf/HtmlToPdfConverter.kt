@@ -20,8 +20,9 @@ class HtmlToPdfConverter {
     fun convert(filePath: String, activity: Activity, callback: Callback) {
         val webView = WebView(activity.applicationContext)
         val htmlContent = File(filePath).readText(Charsets.UTF_8)
-        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setfont.setJavaScriptEnabled(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        webView.
         webView.loadDataWithBaseURL(null, htmlContent, "text/HTML", "UTF-8", null)
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
@@ -36,7 +37,7 @@ class HtmlToPdfConverter {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 
             val attributes = PrintAttributes.Builder()
-                    .setMediaSize(PrintAttributes.MediaSize.ISO_A4)
+                    .setMediaSize(PrintAttributes.MediaSize.UNKNOWN_PORTRAIT)
                     .setResolution(PrintAttributes.Resolution("pdf", "pdf", 600, 600))
                     .setMinMargins(PrintAttributes.Margins.NO_MARGINS).build()
 
