@@ -36,7 +36,7 @@ class HtmlToPdfConverter {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 
             val attributes = PrintAttributes.Builder()
-                    .setMediaSize(PrintAttributes.MediaSize("asdf", "asdf", 8270, 4000))
+                    .setMediaSize(PrintAttributes.MediaSize("asdf", "asdf", 8270, 8270))
                     .setResolution(PrintAttributes.Resolution("pdf", "pdf", 600, 600))
                     .setMinMargins(PrintAttributes.Margins.NO_MARGINS).build()
 
